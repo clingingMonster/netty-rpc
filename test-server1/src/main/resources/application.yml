@@ -1,0 +1,34 @@
+server:
+  port: 8083
+info:
+  name: test-server1
+  os: ${os.name}
+  version: "@project.version@"
+  instance: ${eureka.instance.instance-id}
+
+#  eureka 信息
+eureka:
+  client:
+    healthcheck:
+      enabled: true
+    # 定时刷新本地缓存时间
+    registry-fetch-interval-seconds: 5
+    service-url:
+      defaultZone: https://eureka.dian-stable.com/eureka
+  instance:
+    non-secure-port-enabled: true
+    non-secure-port: 80
+    prefer-ip-address: true
+    # 心跳间隔，5秒
+    lease-renewal-interval-in-seconds: 5
+    # 没有心跳的淘汰时间，10秒
+    lease-expiration-duration-in-seconds: 10
+    instance-id: ${spring.cloud.client.ip-address}:${server.port}
+    metadata-map:
+      instance-id: ${eureka.instance.instance-id}
+      x-remote-port: ${netty.server.port}
+    appname: ${info.name}
+
+netty:
+  server:
+    port: 8883

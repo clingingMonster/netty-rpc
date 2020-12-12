@@ -1,0 +1,14 @@
+/target/
+*.settings/
+.classpath
+.project
+*.iml
+/.idea
+*.DS_Store
+*.ipr
+*.iws
+/*/target/
+.mvn
+mvn*
+src/main/resources/banner.txt
+src/main/resources/rebel.xml
