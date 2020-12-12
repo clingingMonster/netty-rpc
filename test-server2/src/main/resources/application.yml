@@ -14,7 +14,7 @@ eureka:
     # 定时刷新本地缓存时间
     registry-fetch-interval-seconds: 5
     service-url:
-      defaultZone: https://eureka.dian-stable.com/eureka
+      defaultZone: https://***/eureka
   instance:
     non-secure-port-enabled: true
     non-secure-port: 80
