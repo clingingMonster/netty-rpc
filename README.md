@@ -14,7 +14,7 @@
 
 ## 版本要求
 - JDK 1.8 以上
-- Spring Boot 1.5 以上
+- Spring Boot 2.1 以上
 
 ## 适用
 
